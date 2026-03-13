@@ -1,3 +1,6 @@
 <!-- <app-button (onClick)="clicadoai()" [label]="this.count.toString()"></app-button> -->
-<app-input (change)="receiveText($event.toString())"></app-input>
-<p>{{ text }}</p>
+
+<!-- <br> -->
+
+<app-button [label]="this.text"></app-button>
+<app-input (Change)="updateText($event)" [label]="this.text"></app-input>

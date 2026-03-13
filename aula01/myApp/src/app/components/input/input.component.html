@@ -1,1 +1,5 @@
-<input placeholder="escreve ai" name="inputText" #message (change)="sendText(message.value)"/>
+<input 
+    (input)="changed($event)"
+    type="text" 
+    placeholder="escreva..."
+>

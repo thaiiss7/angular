@@ -7,11 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'chess';
-  // count = 0;
+  count = 0;
   text = "";
 
-  receiveText = (message: string) => {
-    // this.count++;
-    this.text = message;
+  foiClickado = () => {
+    this.count++;
+  }
+
+  updateText = (event: string) => {
+    console.log("atualizando");
+    this.text = event;
   }
 }

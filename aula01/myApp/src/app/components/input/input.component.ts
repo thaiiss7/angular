@@ -6,13 +6,17 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent {
-  // @Input()
-  // message: string = "";
 
   @Output()
   messageEvent = new EventEmitter<string>();
 
-  sendText(value: string) {
-    this.messageEvent.emit(value)
+  @Input()
+  label: string = "";
+  text: string = "";
+
+  changed = (value: any) => {
+    this.text = event.srcElement.value;
+    console.log(this.text);
+    this.Change.emit(this.text);
   }
 }
