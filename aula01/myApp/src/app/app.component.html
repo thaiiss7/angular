@@ -1,6 +1,9 @@
+<!-- app component é o componente pai, os componentes filhos se comunicam através do pai -->
+
 <!-- <app-button (onClick)="clicadoai()" [label]="this.count.toString()"></app-button> -->
 
 <!-- <br> -->
 
 <app-button [label]="this.text"></app-button>
+<!-- chama a função Change do input.component -->
 <app-input (Change)="updateText($event)" [label]="this.text"></app-input>
