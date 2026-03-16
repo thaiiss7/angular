@@ -4,6 +4,9 @@
 
 <!-- <br> -->
 
+<!-- o pai passa a mudança de texto para o filho botão -->
 <app-button [label]="this.text"></app-button>
-<!-- chama a função Change do input.component -->
+
+<!-- chama a função updateText quando o filho emite um evento -->
+<!-- o componente pai recebe o texto e passa para a função -->
 <app-input (Change)="updateText($event)" [label]="this.text"></app-input>
