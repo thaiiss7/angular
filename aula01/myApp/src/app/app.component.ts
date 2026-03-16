@@ -14,6 +14,7 @@ export class AppComponent {
     this.count++;
   }
 
+  // o pai recebe a mudança no evento do filho input e armazena esse valor em text
   updateText = (event: string) => {
     console.log("atualizando");
     this.text = event;
