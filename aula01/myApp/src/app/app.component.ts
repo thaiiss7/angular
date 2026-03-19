@@ -7,16 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'chess';
-  count = 0;
+  // count = 0;
+
   text = "";
 
-  foiClickado = () => {
-    this.count++;
-  }
+  // foiClickado = () => {
+  //   this.count++;
+  // }
 
   // o pai recebe a mudança no evento do filho input e armazena esse valor em text
-  updateText = (event: string) => {
-    console.log("atualizando");
-    this.text = event;
+  updateText = (value: string) => {
+    this.text = value;
   }
 }

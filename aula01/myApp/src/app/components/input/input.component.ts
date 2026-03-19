@@ -7,20 +7,23 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class InputComponent {
 
-  @Output()
-  messageEvent = new EventEmitter<string>();
-
   @Input()
   label: string = "";
-  text: string = "";
+  @Input()
+  value: string = "";
 
-  // recebe o texto vindo do input pela função changed
-  changed = (value: any) => {
+  @Output()
+  messageEvent: EventEmitter<string> = new EventEmitter();
+
+  // recebe o texto vindo do input pela função changedText
+  changedText = (value: any) => {
+
     // pega o valor do alvo que disparou o evento
-    // target pode ser usado no lugar de srcElement
-    this.text = event.srcElement.value;
-    console.log(this.text);
+    // target pode ser usado no lugar do target
+    const stringValue = value.target.value
+    console.log(value.target.value);
+
     // avisa o componente pai quando o texto muda
-    this.Change.emit(this.text);
+    this.messageEvent.emit(stringValue);
   }
 }
