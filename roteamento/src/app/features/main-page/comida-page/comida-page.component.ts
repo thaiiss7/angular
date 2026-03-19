@@ -17,10 +17,4 @@ export class ComidaPageComponent {
     this.pessoas = MockPessoas;
     this.foods = MockComidas;
   }
-
-  // item = {}
-
-  // sendData = (value: object) => {
-  //   this.item = value;
-  // }
 }

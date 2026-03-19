@@ -12,4 +12,10 @@
     .title {
         font-weight: bold;
     }
+
+    mat-chip {
+        background-color: #FFD1BD;
+        height: 2rem;
+        font-weight: bold;
+    }
 }

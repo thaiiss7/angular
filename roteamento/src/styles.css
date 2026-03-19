@@ -4,3 +4,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --red-header: #990F1E;
+    --red-nav: #AD2B32;
+    --food-card: #E37883;
+    --market-card: #FFAB85;
+    
+    font-family: sans-serif;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

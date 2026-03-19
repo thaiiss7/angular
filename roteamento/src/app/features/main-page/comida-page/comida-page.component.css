@@ -5,9 +5,10 @@
     margin: 3rem;
 
     .item {
-        background-color: #E0BADD;
+        background-color: var(--food-card);
         border-radius: .5rem;
         padding: 2rem;
         width: 15vw;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     }
 }

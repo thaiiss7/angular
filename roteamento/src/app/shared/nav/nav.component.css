@@ -4,7 +4,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #C099C4;
+    background-color: var(--red-nav);
 
     .links {
         display: flex;
@@ -12,6 +12,10 @@ nav {
         align-items: start;
         gap: .5rem;
         padding: .5rem;
+    }
+
+    a {
+        color: white;
     }
 
     .config {

@@ -4,11 +4,19 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 2rem;
-    background-color: #E6C0ED;
+    background-color: var(--red-header);
+    color: white;
     align-items: center;
 
     .links {
         display: flex;
         gap: 1rem;
+    }
+    a {
+        color: white;
+    }
+
+    h1 {
+        font-family: cursive;
     }
 }

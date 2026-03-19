@@ -11,6 +11,9 @@ import { NavComponent } from './shared/nav/nav.component';
 import { MercadoPageComponent } from './features/main-page/mercado-page/mercado-page.component';
 import { ComidaPageComponent } from './features/main-page/comida-page/comida-page.component';
 import { ComidaCardComponent } from './features/main-page/comida-page/comida-card/comida-card.component';
+import { MercadoCardComponent } from './features/main-page/mercado-page/mercado-card/mercado-card.component';
+import { MatChipsModule } from '@angular/material/chips';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,14 @@ import { ComidaCardComponent } from './features/main-page/comida-page/comida-car
     NavComponent,
     MercadoPageComponent,
     ComidaPageComponent,
-    ComidaCardComponent
+    ComidaCardComponent,
+    MercadoCardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatChipsModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,7 +6,10 @@
         <p>{{ value.description }}</p>
     </section>
     <section class="info">
-        <p>{{ value.portion }}</p>
+        <p>{{ value.quantity }}</p>
         <p class="price">{{ "R$ " + value.price }}</p>
     </section>
+    <mat-chip-set>
+        <mat-chip>{{ value.store }}</mat-chip>
+    </mat-chip-set>
 </div>

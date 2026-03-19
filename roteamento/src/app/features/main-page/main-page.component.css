@@ -1,3 +1,5 @@
 .main-container {
     display: flex;
+    overflow-y: scroll auto;
+    background-color: white;
 }
