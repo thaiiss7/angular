@@ -9,4 +9,7 @@
 
 <!-- chama a função updateText quando o filho emite um evento -->
 <!-- o componente pai recebe o texto e passa para a função -->
-<app-input (messageEvent)="updateText($event)" [label]="this.text"></app-input>
+<!-- 
+<app-input (messageEvent)="updateText($event)" [label]="this.text"></app-input> -->
+
+<input type="text" [(ngModel)]="text">
