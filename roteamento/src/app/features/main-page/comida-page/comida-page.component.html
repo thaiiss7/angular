@@ -1,1 +1,11 @@
-<p>comida-page works!</p>
+<!-- <div class="container">
+    <div class="item" *ngFor="let person of pessoas; track: $index">
+        {{ person.name }}
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="item" *ngFor="let food of foods; track: $index">
+        <app-comida-card [value]="food"></app-comida-card>
+    </div>
+</div>
