@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
+import { IComida } from '../comida.mock';
 
 @Component({
   selector: 'app-comida-card',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./comida-card.component.css']
 })
 export class ComidaCardComponent {
-
+  @Input()
+  value!: IComida;
 }

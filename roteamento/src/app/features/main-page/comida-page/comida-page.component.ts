@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import MockPessoas, { IPessoa } from './Pessoas.mock';
 import MockComidas, { IComida } from './comida.mock';
+import { EMPTY } from 'rxjs';
 
 @Component({
   selector: 'app-comida-page',
@@ -16,4 +17,10 @@ export class ComidaPageComponent {
     this.pessoas = MockPessoas;
     this.foods = MockComidas;
   }
+
+  // item = {}
+
+  // sendData = (value: object) => {
+  //   this.item = value;
+  // }
 }
