@@ -1,0 +1,19 @@
+<div class="modal-bg" (click)="close()">
+    <div class="modal-container">
+        <header>
+            <div class="title">
+                {{ item?.name }}
+            </div>
+            <div class="close" (click)="close()">
+                x
+            </div>
+        </header>
+        <div class="info">
+            <p>{{ item?.description }}</p>
+            <p>{{ item?.price }}</p>
+        </div>
+        <!-- <div class="footer">
+            <button>comprar</button>
+        </div> -->
+    </div>
+</div>

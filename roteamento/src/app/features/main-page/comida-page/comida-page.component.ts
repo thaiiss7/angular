@@ -11,10 +11,18 @@ import { EMPTY } from 'rxjs';
 export class ComidaPageComponent {
   protected pessoas: IPessoa[] = []
   protected foods: IComida[] = []
+  // protected open = false;
+  protected focusedFood?: IComida;
 
   //vao ser executado quando o compeoenet for inicializado
   constructor () {
     this.pessoas = MockPessoas;
     this.foods = MockComidas;
+  }
+
+  openModal(item: IComida) {
+    // this.open = true;
+
+    this.focusedFood = item;
   }
 }

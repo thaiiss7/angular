@@ -5,7 +5,9 @@
 </div> -->
 
 <div class="container">
-    <div class="item" *ngFor="let food of foods; track: $index">
+    <div class="item" *ngFor="let food of foods; track: $index" (click)="openModal(food)">
         <app-comida-card [value]="food"></app-comida-card>
     </div>
 </div>
+
+<app-modal *ngIf="focusedFood" [item]="focusedFood" (onClose)="focusedFood = undefined"></app-modal>
