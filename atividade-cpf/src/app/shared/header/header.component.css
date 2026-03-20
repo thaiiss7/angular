@@ -1,0 +1,13 @@
+header {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: flex-start;
+    padding: 2rem;
+    background-color: var(--color-header);
+    align-items: center;
+
+    h1 {
+        font-family: cursive;
+    }
+}

@@ -1,0 +1,8 @@
+.login-container {
+    display: flex;
+    background-color: var(--color-background);
+}
+
+h1 {
+    color: white;
+}
