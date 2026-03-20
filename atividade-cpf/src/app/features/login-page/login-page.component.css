@@ -1,6 +1,21 @@
 .login-container {
     display: flex;
     background-color: var(--color-background);
+
+    .body {
+        height: calc(100vh - 5rem);
+        width: calc(100vw - 10rem);
+        display: flex;
+        justify-content: center;
+    }
+
+    header{
+        height: 25%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 3rem;
+    }
 }
 
 h1 {
