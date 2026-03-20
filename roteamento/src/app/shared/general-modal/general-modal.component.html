@@ -1,0 +1,21 @@
+<div class="modal-bg" (click)="close()"></div>
+<div class="modal-container">
+    <header>
+        <div class="title">
+            <h1>{{ Title }}</h1>
+        </div>
+        <div class="close" (click)="close()">
+            <h2>x</h2>
+        </div>
+    </header>
+    <div class="content">
+        <ng-content></ng-content>
+    </div>
+    <div class="modal-footer">
+        <div *ngIf="Confirmation" class="confirmation">
+            <button (click)="close()">Cancel</button>
+            <button (click)="save()">{{ SaveLabel || "Save" }}</button>
+        </div>
+    </div>
+</div>
+        

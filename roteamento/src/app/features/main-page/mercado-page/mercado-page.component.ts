@@ -8,8 +8,14 @@ import MockProdutos, { IMercado } from './mercado-card/mercado.mock';
 })
 export class MercadoPageComponent {
   protected products: IMercado[] = []
+  protected focusedProduct?: IMercado;
 
   constructor () {
     this.products = MockProdutos
   }
+
+  openModal(item: IMercado) {
+  
+      this.focusedProduct = item;
+    }
 }

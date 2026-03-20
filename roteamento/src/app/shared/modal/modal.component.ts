@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { find } from 'rxjs';
 import { IComida } from 'src/app/features/main-page/comida-page/comida.mock';
+import { IMercado } from 'src/app/features/main-page/mercado-page/mercado-card/mercado.mock';
 
 @Component({
   selector: 'app-modal',
@@ -10,7 +11,7 @@ import { IComida } from 'src/app/features/main-page/comida-page/comida.mock';
 })
 export class ModalComponent {
   @Input()
-  item?: IComida;
+  item?: IComida | IMercado;
 
   @Output()
   onClose: EventEmitter<void> = new EventEmitter();

@@ -25,4 +25,8 @@ export class ComidaPageComponent {
 
     this.focusedFood = item;
   }
+
+  save = () => {
+    alert('Pedido efetuado com sucesso!')
+  }
 }

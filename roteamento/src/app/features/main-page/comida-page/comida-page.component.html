@@ -10,4 +10,23 @@
     </div>
 </div>
 
-<app-modal *ngIf="focusedFood" [item]="focusedFood" (onClose)="focusedFood = undefined"></app-modal>
+<!-- <app-modal *ngIf="focusedFood" [item]="focusedFood" (onClose)="focusedFood = undefined"></app-modal> -->
+
+<app-general-modal
+    *ngIf="focusedFood"
+    (onClose)="focusedFood = undefined"
+    [Confirmation]="true"
+    [Title]="'olha so'"
+    SaveLabel="Adicionar na sacola"
+    (onSave)="save()"
+>
+    <header>
+        <div class="title">
+            <h1>{{ focusedFood?.name }}</h1>
+        </div>
+    </header>
+    <div class="content">
+        <p *ngIf="focusedFood?.description">{{ "Descrição: " + focusedFood?.description }}</p>
+        <p>{{ "Preço: R$" + focusedFood?.price }}</p>
+    </div>
+</app-general-modal>

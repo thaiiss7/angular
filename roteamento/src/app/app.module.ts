@@ -15,6 +15,7 @@ import { MercadoCardComponent } from './features/main-page/mercado-page/mercado-
 import { MatChipsModule } from '@angular/material/chips';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalComponent } from './shared/modal/modal.component';
+import { GeneralModalComponent } from './shared/general-modal/general-modal.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ModalComponent } from './shared/modal/modal.component';
     ComidaPageComponent,
     ComidaCardComponent,
     MercadoCardComponent,
-    ModalComponent
+    ModalComponent,
+    GeneralModalComponent
   ],
   imports: [
     BrowserModule,

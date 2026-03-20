@@ -1,5 +1,7 @@
 <div class="container">
-    <div class="item" *ngFor="let product of products; track: $index">
+    <div class="item" *ngFor="let product of products; track: $index" (click)="openModal(product)">
         <app-mercado-card [value]="product"></app-mercado-card>
     </div>
 </div>
+
+<app-modal *ngIf="focusedProduct" [item]="focusedProduct" (onClose)="focusedProduct = undefined"></app-modal>
