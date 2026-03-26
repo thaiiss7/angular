@@ -9,6 +9,7 @@ import { NavComponent } from './shared/nav/nav.component';
 import { ModalComponent } from './shared/modal/modal.component';
 import { LoginPageComponent } from './features/login-page/login-page.component';
 import { NotFoundPageComponent } from './features/not-found-page/not-found-page.component';
+import { CpfValidatorComponent } from './features/login-page/cpf-validator/cpf-validator.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NotFoundPageComponent } from './features/not-found-page/not-found-page.
     NavComponent,
     ModalComponent,
     LoginPageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    CpfValidatorComponent
   ],
   imports: [
     BrowserModule,

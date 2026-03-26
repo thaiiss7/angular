@@ -1,12 +1,22 @@
 <app-header></app-header>
 <div class="login-container">
     <app-nav></app-nav>
-    <main>
+    <main (click)="openModal()">
         <router-outlet></router-outlet>
-        <div class="body">
-            <header>
-                <h1>Login</h1>
-            </header>
-        </div>
     </main>
 </div>
+
+<app-modal
+(onClose)="open = false"
+[Confirmation]="true"
+[Title]="'Login'"
+>
+<div class="input-container">
+    <div class="cpf-input">
+        <app-cpf-validator (messageEvent)="cpfChange($event)"></app-cpf-validator>
+    </div>
+    <input type="text"
+    placeholder="Digite a sua senha..."
+    [value]="value">
+</div>
+</app-modal>

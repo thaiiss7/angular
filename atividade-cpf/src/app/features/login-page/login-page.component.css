@@ -1,23 +1,27 @@
 .login-container {
     display: flex;
+    width: 100%;
+    height: 100%;
     background-color: var(--color-background);
 
-    .body {
-        height: calc(100vh - 5rem);
-        width: calc(100vw - 10rem);
-        display: flex;
-        justify-content: center;
-    }
-
-    header{
-        height: 25%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 3rem;
-    }
 }
 
-h1 {
-    color: white;
+input {
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-red);
+    gap: 1rem;
+}
+
+.cpf-input {
+    width: 100%;
+    height: 100%;
 }
