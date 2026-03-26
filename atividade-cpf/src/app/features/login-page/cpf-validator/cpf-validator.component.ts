@@ -12,14 +12,16 @@ export class CpfValidatorComponent {
   @Output()
   messageEvent: EventEmitter<string> = new EventEmitter();
 
+  isCpfValid: boolean = false;
+
   validate = (value: any) => {
     let cpf = value.target.value;
 
     cpf = cpf.replace(/\D/g, '');
 
-    if (cpf.length !== 11) return false
+    if (cpf.length !== 11) return
 
-    if (/^(\d)\1+$/.test(cpf)) return false;
+    if (/^(\d)\1+$/.test(cpf)) return
 
     let soma = 0
     let resto
@@ -32,7 +34,7 @@ export class CpfValidatorComponent {
     resto = (soma * 10) % 11;
     if (resto === 10 || resto === 11) resto = 0;
 
-    if (resto !== parseInt(cpf.charAt(9))) return false;
+    if (resto !== parseInt(cpf.charAt(9))) return;
 
     soma = 0;
 
@@ -44,8 +46,9 @@ export class CpfValidatorComponent {
     resto = (soma * 10) % 11;
     if (resto === 10 || resto === 11) resto = 0;
 
-    if (resto !== parseInt(cpf.charAt(10))) return false;
+    if (resto !== parseInt(cpf.charAt(10))) return;
 
+    this.isCpfValid = true;
     console.log('deu boa no cpf')
     return this.messageEvent.emit(cpf);
   }

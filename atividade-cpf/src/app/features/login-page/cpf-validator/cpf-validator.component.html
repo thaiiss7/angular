@@ -2,3 +2,7 @@
     (input)="validate($event)"
     placeholder="Digite o seu CPF..."
     [value]="value">
+
+<div *ngIf="!isCpfValid" class="error-message">
+    CPF Inválido
+</div>
