@@ -11,28 +11,28 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App implements OnInit{
+export class App{
   protected readonly title = signal('rplace');
-  protected _date = signal(new Date());
+  // protected _date = signal(new Date());
 
-  protected _stringDate: Signal<string> = computed(() => {
-    return `${this._date().getFullYear()}-
-    ${this._date().getMonth()+1}-
-    ${this._date().getDate()}`
-  })
+  // protected _stringDate: Signal<string> = computed(() => {
+  //   return `${this._date().getFullYear()}-
+  //   ${this._date().getMonth()+1}-
+  //   ${this._date().getDate()}`
+  // })
 
-  ngOnInit() {
-    console.log(this.title());
-  }
+  // ngOnInit() {
+  //   console.log(this.title());
+  // }
 
-  // atualizar o valor do signal
-  addDay(add: boolean = true) {
-    this._date.update((oldValue) => {
-      let day = add ? oldValue.getDate() + 1 : oldValue.getDate() - 1;
-      let month = oldValue.getMonth();
-      let year = oldValue.getFullYear();
+  // // atualizar o valor do signal
+  // addDay(add: boolean = true) {
+  //   this._date.update((oldValue) => {
+  //     let day = add ? oldValue.getDate() + 1 : oldValue.getDate() - 1;
+  //     let month = oldValue.getMonth();
+  //     let year = oldValue.getFullYear();
 
-      return new Date(year, month, day);
-    })
-  }
+  //     return new Date(year, month, day);
+  //   })
+  // }
 }
