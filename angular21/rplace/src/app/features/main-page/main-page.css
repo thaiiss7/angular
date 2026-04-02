@@ -1,0 +1,24 @@
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: calc(100vh - 5rem);
+    background-color: #FBEFEF;
+}
+
+.image {
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pixel {
+    background-color: blue;
+    width: 2px;
+    height: 2px;
+}

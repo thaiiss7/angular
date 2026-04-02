@@ -1,0 +1,12 @@
+header {
+    width: 100vw;
+    height: 5rem;
+    display: flex;
+    padding: 2rem;
+    background-color: #F5AFAF;
+    align-items: center;
+
+    h1 {
+        font-family: cursive;
+    }
+}
