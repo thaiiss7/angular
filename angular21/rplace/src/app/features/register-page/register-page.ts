@@ -62,13 +62,14 @@ export class RegisterPage {
   }
 
   subscribe = () => {
+
     if(!this.loginForm.valid)
     {
       alert("Existem campos inválidos!")
       return
     }
 
-    if(this.Password != this.RepeatPassword)
+    if(this.Password?.value !== this.RepeatPassword?.value)
     {
       alert("Senhas não coincidem!")
       return

@@ -5,7 +5,7 @@
             <header>
                 <h1>Register</h1>
             </header>
-            <form class="content" action="post" [formGroup]="loginForm" (ngSubmit)="login()">
+            <form class="content" action="post" [formGroup]="loginForm" (ngSubmit)="subscribe()">
                 <input type="text" placeholder="Login" formControlName="username">
                 <input type="password" placeholder="Password" formControlName="password">
                 <input type="password" placeholder="Repeat password" formControlName="repeatPassword">
