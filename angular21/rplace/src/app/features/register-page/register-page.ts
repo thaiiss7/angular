@@ -85,9 +85,9 @@ export class RegisterPage {
         console.log(res)
         // sessionStorage.setItem("token", res)
         // location.reload()
+        this.router.navigate(['/home'])
       } 
     )
 
-    return this.router.navigate(['/home'])
   }
 }
