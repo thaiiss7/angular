@@ -5,15 +5,16 @@
             <header>
                 <h1>Register</h1>
             </header>
-            <div class="content">
-                <input type="text" placeholder="Login">
-                <input type="text" placeholder="Password">
+            <form class="content" action="post" [formGroup]="loginForm" (ngSubmit)="login()">
+                <input type="text" placeholder="Login" formControlName="username">
+                <input type="password" placeholder="Password" formControlName="password">
+                <input type="password" placeholder="Repeat password" formControlName="repeatPassword">
                 <button>Register</button>
                 <div class="link">
                     <p>Already have an account?</p>
                     <a href="/">Login</a>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
