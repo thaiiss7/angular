@@ -1,9 +1,14 @@
-<div>
-    <app-header></app-header>
-    <div class="page-container">
-        <div class="image">
-            <div class="pixel"></div>
-        </div>
+<div class="container">
+    <div class="container-pixel">
+        @for(i of pixels; track $index){
+            <div (click)="onChangeColor(i)" [style.top]="`${i.y * 9}px`"[style.left]="`${i.x * 9}px`" [style.backgroundColor]="i.color" class="pixel"></div>
+        }
+        @if(isChange){
+            <div class="modal" [style.top]="`${pixelChange.y * 9}px`"[style.left]="`${pixelChange.x * 9}px`" >
+                <h2>Escolha a Cor</h2>
+                <input type="color" (input)="color = $event.target.value"/>
+                <button class="button" (click)="closeModal()">Confirmar</button>
+            </div>
+        }
     </div>
 </div>
- 

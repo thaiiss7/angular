@@ -5,3 +5,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --hover-button: #e2dada;
+    --light-pink: #FCF8F8;
+    --background: #FBEFEF;
+    --form-pink: #F9DFDF;
+    --dark-pink: #F5AFAF;
+}
