@@ -1,0 +1,23 @@
+Comandos:
+
+npm  install -g @angular/cli@16
+ng --help
+ng version
+ng new chess
+ng generate component components/input
+npm uninstall -g @angular/cling g service domain/api
+ng g guard domain/AuthGuard
+
+Two way binding:
+
+import { FormsModule } from '@angular/forms';
+--
+[(ngModel)]="text"
+
+Signal:
+
+// rastreabilidade de uma variável
+// monitorar alterações
+export class App {
+  protected readonly title = signal('rplace');
+}
