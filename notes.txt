@@ -15,9 +15,19 @@ import { FormsModule } from '@angular/forms';
 [(ngModel)]="text"
 
 Signal:
+mostrar algo na tela que seja atualizado - integra
 
 // rastreabilidade de uma variável
 // monitorar alterações
 export class App {
   protected readonly title = signal('rplace');
 }
+
+Stand Alone Component:
+cria um componente não tendo um módulo principal
+-> componentes do angular
+
+ponte é feita com o httpclient
+envia pacotes entre front e back -> subscribe envia
+observable monitora esse processo e cuida dos acessos
+pipe fecha a ponte
