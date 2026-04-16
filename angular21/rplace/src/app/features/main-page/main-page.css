@@ -45,3 +45,8 @@
     background-color: var(--hover-button);
     cursor: pointer;
 }
+
+.pixels-position {
+    display: flex;
+    gap: 1rem;
+}

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Api } from './api';
 import { IPixel } from '../features/main-page/Pixel.Mock';
-import { CanvasAction, MessageType, WebSocketMessage } from './interfaces/room';
+import { CanvasAction, GetAllRoomsResponse, MessageType, WebSocketMessage } from './interfaces/room';
 import { Observable, Subject } from 'rxjs';
 
 @Injectable({
@@ -78,6 +78,12 @@ export class RoomApi extends Api {
       console.log("wb não conectado")
     }
   }
+
+  // public getRooms = () :Observable<GetAllRoomsResponse> => {
+  //   var token = sessionStorage.getItem('token')
+  //   if(!token) alert("acesso não autorizado")
+  //     return this.client.get<GetAllRoomsResponse>(`${this.URL}/room`, {headers:this.headers}).pipe()
+  // }
 
 }
 

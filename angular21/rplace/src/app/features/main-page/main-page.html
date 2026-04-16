@@ -1,13 +1,24 @@
 <div class="container">
     <div class="container-pixel">
-        @for(i of pixels; track $index){
-            <div (click)="onChangeColor(i)" [style.top]="`${i.y * 9}px`"[style.left]="`${i.x * 9}px`" [style.backgroundColor]="i.color" class="pixel"></div>
+        @for (row of pixels; track $index) {
+            <div class="row">
+                @for (pixel of row; track $index) {
+                    <app-pixel [data]="pixel" (click)="onChangeColor(pixel)" />
+                }
+            </div>
         }
+        <!-- @for(i of pixels; track $index){
+            <div (click)="onChangeColor(i)" [style.top]="`${(i.y - 1) * 9}px`"[style.left]="`${(i.x - 1) * 9}px`" [style.backgroundColor]="i.color" class="pixel"></div>
+        } -->
         @if(isChange){
-            <div class="modal" [style.top]="`${pixelChange.y * 9}px`"[style.left]="`${pixelChange.x * 9}px`" >
-                <h2>Escolha a Cor</h2>
+            <div class="modal" [style.top]="`${(pixelChange.y -1 ) * 9}px`"[style.left]="`${(pixelChange.x - 1) * 9}px`" >
+                <h3>Escolha a Cor</h3>
                 <input type="color" (input)="color = $event.target.value"/>
                 <button class="button" (click)="closeModal()">Confirmar</button>
+                <div class="pixels-position">
+                    <p>x: {{pixelChange.x}}</p>
+                    <p>y: {{pixelChange.y}}</p>
+                </div>
             </div>
         }
     </div>

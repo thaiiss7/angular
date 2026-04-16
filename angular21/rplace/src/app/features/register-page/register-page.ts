@@ -38,28 +38,28 @@ export class RegisterPage {
     return this.loginForm.get("repeatPassword")
   }
 
-  login = () => {
-    if(!this.loginForm.valid)
-    {
-      alert("Existem campos inválidos!")
-      return
-    }
+  // login = () => {
+  //   if(!this.loginForm.valid)
+  //   {
+  //     alert("Existem campos inválidos!")
+  //     return
+  //   }
     
-    const data: LoginDto = {
-      password: this.Password?.value,
-      username: this.Username?.value,
-    }
+  //   const data: LoginDto = {
+  //     password: this.Password?.value,
+  //     username: this.Username?.value,
+  //   }
 
-    this.api.login(data).subscribe(
-      res =>{
-        console.log(res)
-        sessionStorage.setItem("token", res)
-        // location.reload()
-      } 
-    )
+  //   this.api.login(data).subscribe(
+  //     res =>{
+  //       console.log(res)
+  //       sessionStorage.setItem("token", res)
+  //       // location.reload()
+  //     } 
+  //   )
 
-    return this.router.navigate(['/home'])
-  }
+  //   return this.router.navigate(['/home'])
+  // }
 
   subscribe = () => {
 

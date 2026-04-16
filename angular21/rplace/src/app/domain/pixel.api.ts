@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Api } from './api';
 import { Observable } from 'rxjs';
-import { PixelDto } from './PixelInterface';
+import { PixelDto } from './Pixelnterface';
 import { IPixel } from '../features/main-page/Pixel.Mock';
 
 @Injectable({
@@ -12,7 +12,7 @@ export class PixelApi extends Api{
     return this.client.get<PixelDto[]>(`${this.URL}/pixel`).pipe()
   }
 
-  public updatePixel = (data: IPixel): Observable<void> => {
+  public updatePixel = (data: PixelDto): Observable<void> => {
     return this.client.post<void>(`${this.URL}/pixel`, data).pipe()
   }
 }

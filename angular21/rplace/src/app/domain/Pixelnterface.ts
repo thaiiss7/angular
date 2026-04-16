@@ -1,10 +1,10 @@
 import { UserDto } from "./UserInterfaces";
 
 export interface PixelDto{
-    id: string,
+    id?: string,
     x: number,
     y: number,
-    user: UserDto,
+    user?: UserDto,
     color: string,
-    lastChange: Date
+    lastChange?: Date
 }
