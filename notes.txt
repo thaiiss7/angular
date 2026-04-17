@@ -31,3 +31,19 @@ ponte é feita com o httpclient
 envia pacotes entre front e back -> subscribe envia
 observable monitora esse processo e cuida dos acessos
 pipe fecha a ponte
+
+Competencias cobradas:
+
+
+1. Compreender Arquitetura Angular e seus comandos
+2. Elaborar componentes (templates e bindings)
+3. Produzir formulários reativos utilizando forms
+4. Utilizar o conceito de SPA (single page application)
+5. Compreender funcionamento de componentes 'standalone'
+6. Aplicar ferramentas de otimização de renderização reativa (signals)
+7. Aplicar ferramentas de operações assíncronas (observables)
+8. Utilizar modulação para fazer requisições https
+
+*SE DER TEMPO*
+9. Implementar conexões frontend e backend com serviços de websocket (RPLACE)
+10. Implementar conexões frontend e backend com serviços de messageria
